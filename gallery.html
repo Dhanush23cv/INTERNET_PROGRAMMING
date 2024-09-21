@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Rimberio Cafe Zone</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-ka1rhV9TfBJO6HZez7kabqX1sUX5udFJA&s");
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: blanchedalmond;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px 0 30px;
+            font-size: 3rem;
+            color:blanchedalmond;
+            letter-spacing: 1.2px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            flex: 1 1 30%;
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            color: #fff;
+            text-align: center;
+            transition: opacity 0.3s ease;
+            font-size: 1.5rem;
+        }
+
+        .gallery-item:hover .info {
+            opacity: 1;
+        }
+
+        .gallery-item .info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item .info p {
+            font-size: 1.1rem;
+            color: #f4f4f9;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 45%;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .gallery-item {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Coffee Shop Gallery</h1>
+    <div class="gallery-container">
+        <!-- Existing Gallery Items -->
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/bc/ff/93/bcff93bc7245ae1dd6e6b55221da13b1.jpg" alt="Coffee Shop Interior">
+            <div class="info">
+                <h3>Cozy Interior</h3>
+                <p>Relax in our cozy and warm coffee shop environment.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/61/4f/a0/614fa05d03c80dc9da8c2c6108a30391.jpg" alt="Delicious Coffee">
+            <div class="info">
+                <h3>Delicious Coffee</h3>
+                <p>Enjoy our wide selection of expertly brewed coffees.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/736x/26/fa/e5/26fae598985cefd5ec12c7d2bfcedb55.jpg" alt="Outdoor Seating">
+            <div class="info">
+                <h3>Outdoor Seating</h3>
+                <p>Take in the fresh air with our outdoor seating area.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/d7/b7/a3/d7b7a373fd8354479331f397c063909b.jpg" alt="Coffee Beans">
+            <div class="info">
+                <h3>Premium Beans</h3>
+                <p>We use only the finest coffee beans from around the world.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/db/3f/51/db3f515a77788db0ac5eacffe14b374f.jpg" alt="Artisanal Pastries">
+            <div class="info">
+                <h3>Artisanal Pastries</h3>
+                <p>Pair your coffee with our handmade pastries.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/64/16/8e/64168ee2bc3c755354659ee9f273f524.jpg" alt="Live Music Events">
+            <div class="info">
+                <h3>Live Music</h3>
+                <p>Enjoy live music performances in a relaxing atmosphere.</p>
+            </div>
+        </div>
+
+        <!-- New Gallery Items -->
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/9b/3b/33/9b3b33831ca46522dae676bf11ec6437.jpg" alt="Modern Architecture">
+            <div class="info">
+                <h3>Modern Architecture</h3>
+                <p>A perfect blend of modern design and rustic charm.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/02/74/1e/02741ed4d0b3715cbf00767c7e8d221e.jpg" alt="Espresso Machine">
+            <div class="info">
+                <h3>State-of-the-art Espresso Machines</h3>
+                <p>Our top-of-the-line machines ensure perfect coffee extraction.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/ff/a5/06/ffa506d4a12c074194d22d1bb27efe18.jpg" alt="Variety of Coffees">
+            <div class="info">
+                <h3>Wide Variety of Coffees</h3>
+                <p>Choose from espresso, cappuccino, latte, and more.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/b9/a2/c3/b9a2c353ef689426c5105772783e4063.jpg" alt="Modern Architecture">
+            <div class="info">
+                <h3>Modern Architecture</h3>
+                <p>A perfect blend of modern design and rustic charm.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/80/73/c3/8073c3b1aecbc1c505b82c7efbaeff64.jpg" alt="Coffee Brewing">
+            <div class="info">
+                <h3>Craft Coffee Brewing</h3>
+                <p>We take coffee brewing seriously — with passion and precision.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img src="https://i.pinimg.com/474x/3d/33/1c/3d331c2b463a94d719b4ad0408e84cd0.jpg" alt="Modern Architecture">
+            <div class="info">
+                <h3>Modern Architecture</h3>
+                <p>A perfect blend of modern design and rustic charm.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
