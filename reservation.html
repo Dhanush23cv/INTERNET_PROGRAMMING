@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-ka1rhV9TfBJO6HZez7kabqX1sUX5udFJA&s");
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: blanchedalmond;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #151010;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+        h1, h3 {
+            text-align: center;
+            color:blanchedalmond;
+        }
+
+        .shop-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .shop-info p {
+            font-size: 1rem;
+            color: #9f9696;
+            margin: 5px 0;
+        }
+
+        .reservation-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .reservation-form label {
+            font-size: 1.1rem;
+            color: #9b8b8b;
+            margin-bottom: 5px;
+        }
+
+        .reservation-form input,
+        .reservation-form textarea {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .reservation-form button {
+            background-color: #00f138;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .reservation-form button:hover {
+            background-color: #218838;
+        }
+
+        .reservation-form textarea {
+            height: 100px;
+        }
+
+        .user-details {
+            background-color: #050709;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .user-details h3 {
+            color: #28a745;
+        }
+
+        .social-media {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .social-media i {
+            font-size: 2rem;
+            margin: 0 10px;
+            color:blanchedalmond;
+            transition: color 0.3s;
+        }
+
+        .social-media i:hover {
+            color: #555;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+
+            .social-media i {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Reservation Container -->
+    <div class="container">
+        <h1>Reserve Your Table at Rimberio Cafe</h1>
+
+        <!-- Coffee Shop Info -->
+        <div class="shop-info">
+            <h3>Coffee Shop Timings</h3>
+            <p>Mon-Sun: 8:00 AM - 10:00 PM</p>
+            <h3>Address</h3>
+            <p>123 Coffee Street, Brew City, CO 45678</p>
+            <h3>Contact</h3>
+            <p>Email: info@rimberiocafe.com | Phone: +123-456-7890</p>
+        </div>
+
+        <!-- Reservation Form -->
+        <form class="reservation-form" onsubmit="return displayReservationDetails(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" required>
+
+            <label for="tables">Number of Tables:</label>
+            <input type="number" id="tables" name="tables" min="1" max="10" required>
+
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="day">Preferred Day:</label>
+            <input type="date" id="day" name="day" required>
+
+            <label for="message">Additional Comments:</label>
+            <textarea id="message" name="message"></textarea>
+
+            <button type="submit">Reserve Table</button>
+        </form>
+
+        <!-- User Details Display -->
+        <div class="user-details" id="user-details">
+            <h3>Reservation Confirmed</h3>
+            <p><strong>Name:</strong> <span id="display-name"></span></p>
+            <p><strong>Phone Number:</strong> <span id="display-phone"></span></p>
+            <p><strong>Number of Tables:</strong> <span id="display-tables"></span></p>
+            <p><strong>Preferred Time:</strong> <span id="display-time"></span></p>
+            <p><strong>Preferred Day:</strong> <span id="display-day"></span></p>
+            <p><strong>Additional Comments:</strong> <span id="display-message"></span></p>
+            <a href="index.html"><button style="background-color: #00f138; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 1.2rem;" >Go Back To Home Page</button></a>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Social Media Links -->
+    <div class="social-media">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <!-- JavaScript to display reservation details -->
+    <script>
+        function displayReservationDetails(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form values
+            const name = document.getElementById("name").value;
+            const phone = document.getElementById("phone").value;
+            const tables = document.getElementById("tables").value;
+            const time = document.getElementById("time").value;
+            const day = document.getElementById("day").value;
+            const message = document.getElementById("message").value;
+
+            // Display values in the user-details section
+            document.getElementById("display-name").innerText = name;
+            document.getElementById("display-phone").innerText = phone;
+            document.getElementById("display-tables").innerText = tables;
+            document.getElementById("display-time").innerText = time;
+            document.getElementById("display-day").innerText = day;
+            document.getElementById("display-message").innerText = message || 'No additional comments';
+
+            // Show the user-details section
+            document.getElementById("user-details").style.display = "block";
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

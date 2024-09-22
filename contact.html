@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Rimberio Cafe Zone</title>
+    <style>
+        body {
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTb-ka1rhV9TfBJO6HZez7kabqX1sUX5udFJA&s");
+            background-color: rgba(0, 0, 0, 0.5);
+            background-blend-mode: darken;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            color: blanchedalmond;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container a{
+            background-color: #fff;
+            padding: 10px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .thank-you-section {
+            background-color: #000000;
+            padding: 50px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .thank-you-section h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+        }
+
+        .thank-you-section p {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        /* Staff Section */
+        .staff-section {
+            background-color: #060303;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+        .staff-section h2 {
+            color: #fffefe;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .staff-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        /* Staff Card */
+        .staff-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            text-align: center;
+            width: 350px;
+            padding: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .staff-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .staff-card img {
+            border-radius: 10px;
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .staff-card h3 {
+            color: #E74C3C;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .staff-card h4 {
+            color: #333;
+            font-size: 1.2rem;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .staff-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .staff-card .contact-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            display: inline-block;
+        }
+
+        .staff-card .contact-btn:hover {
+            background-color: #333;
+        }
+
+        .staff-card .star-rating {
+            color: #FFD700;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Thank You Section -->
+        <div class="thank-you-section">
+            <h1>Thank You for Your Valuable Feedback!</h1>
+            <p>We truly appreciate your feedback and are committed to improving our services to provide you with the
+                best
+                coffee experience. Your comments help us grow and deliver an even better cafe experience for you.</p>
+            <p>We look forward to welcoming you back at Rimberio Cafe Zone soon!</p>
+            <a href="index.html" class="button">Back to Home</a>
+        </div>
+
+        <!-- Staff Section -->
+        <div class="staff-section">
+            <h2>Meet Our Amazing Staff</h2>
+            <div class="staff-cards">
+                <!-- Staff Member 1 -->
+                <div class="staff-card">
+                    <img src="https://i.pinimg.com/474x/b6/e9/c1/b6e9c1c604d1084faf55c5aff3d423fa.jpg" alt="Sarah Parker">
+                    <h3>Chef Sarah Parker</h3>
+                    <h4>Head Barista & Founder</h4>
+                    <p>Chef, travel enthusiast, columnist, and coffee specialist. Passionate about delivering the best
+                        brew.</p>
+                    <p>Email: sarahparker@cafe.com</p>
+                    <div class="star-rating">★★★★★</div>
+                    <a href="mailto:sarahparker@cafe.com" class="contact-btn">Contact</a>
+                </div>
+
+                <!-- Staff Member 2 -->
+                <div class="staff-card">
+                    <img src="https://i.pinimg.com/736x/27/5c/a1/275ca1533a4cf609ab74e6ca2d9cb20d.jpg" alt="John Doe">
+                    <h3>Chef John Doe</h3>
+                    <h4>Coffee Specialist</h4>
+                    <p>Specialist in brewing techniques and coffee art. Has over a decade of experience in the industry.
+                    </p>
+                    <p>Email: johndoe@cafe.com</p>
+                    <div class="star-rating">★★★★☆</div>
+                    <a href="mailto:johndoe@cafe.com" class="contact-btn">Contact</a>
+                </div>
+
+                <!-- Staff Member 3 -->
+                <div class="staff-card">
+                    <img src="https://i.pinimg.com/474x/87/cb/ca/87cbca3b19212fa120d706d8c0be593f.jpg" alt="Michael Brown">
+                    <h3>Chef Michael Brown</h3>
+                    <h4>Assistant Manager</h4>
+                    <p>Ensures the smooth running of the cafe and specializes in customer service excellence.</p>
+                    <p>Email: michaelbrown@cafe.com</p>
+                    <div class="star-rating">★★★★☆</div>
+                    <a href="mailto:michaelbrown@cafe.com" class="contact-btn">Contact</a>
+                </div>
+
+                <!-- Staff Member 4 -->
+                <div class="staff-card">
+                    <img src="https://i.pinimg.com/474x/c1/ea/56/c1ea56da990a4afbace4757ab620ab0d.jpg" alt="Emma Watson">
+                    <h3>Chef Emma Watson</h3>
+                    <h4>Customer Relations</h4>
+                    <p>Dedicated to ensuring every customer leaves happy, with a passion for great coffee and
+                        hospitality.</p>
+                    <p>Email: emmawatson@cafe.com</p>
+                    <div class="star-rating">★★★★★</div>
+                    <a href="mailto:emmawatson@cafe.com" class="contact-btn">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
